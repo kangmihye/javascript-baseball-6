@@ -9,10 +9,8 @@ class User {
 		let replay = "";
 
 		if (value === NUMBER) {
-			userNum = await MissionUtils.Console.readLineAsync(
-				"숫자를 입력해주세요 : "
-			);
-
+			userNum = await MissionUtils.Console.readLineAsync("숫자를 입력해주세요 : ");
+			console.log("콘솔", userNum);
 			if (isNaN(parseInt(userNum))) throw new Error(ERROR);
 			if (userNum.length !== 3) throw new Error(ERROR);
 		} else if (value === REPLAY) {
