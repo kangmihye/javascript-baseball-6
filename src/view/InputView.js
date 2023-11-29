@@ -6,7 +6,6 @@ const InputView = {
 		Console.print(INPUT_VIEW.startGame);
 	},
 	async readNumber() {
-		// const input = await Console.readLineAsync(INPUT_VIEW.askNumber);
 		return await Console.readLineAsync(INPUT_VIEW.askNumber);
 	},
 	// ...

@@ -1,6 +1,6 @@
 import InputView from "../view/InputView.js";
-import inputErrorHandler from "./inputErrorHandler.js";
-import { validateNumbers } from "./validateInput.js";
+import inputErrorHandler from "../service/inputErrorHandler.js";
+import { validateNumbers } from "../service/validateInput.js";
 
 const ViewController = {
 	async gameStart() {
