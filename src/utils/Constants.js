@@ -9,4 +9,5 @@ export const OUTPUT_VIEW = Object.freeze({
 
 export const ERROR = Object.freeze({
 	isInvalidNum: "[ERROR] 숫자가 잘못된 형식입니다.",
+	isDuplicated: "[ERROR] 중복된 값이 있습니다.",
 });

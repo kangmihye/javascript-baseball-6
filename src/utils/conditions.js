@@ -12,3 +12,7 @@ export const isInvalidRange = (input) => {
 	return input < 1 || input > 31;
 };
 
+export const isDuplicated = (input) => {
+	//true면 중복
+	return input.length !== new Set(input).size;
+};
