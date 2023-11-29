@@ -1,10 +1,8 @@
-import InputView from "./view/InputView.js";
+import ViewController from "./controller/ViewController.js";
 
 class App {
 	async play() {
-		InputView.printGameStart();
-		const inputNumber = await InputView.readNumber();
-		console.log(inputNumber);
+		await ViewController.gameStart();
 	}
 }
 
