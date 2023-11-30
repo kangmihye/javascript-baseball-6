@@ -4,7 +4,7 @@ class App {
 	async play() {
 		ViewController.gameStart();
 		await ViewController.playGame();
-		await ViewController.replayGame();
+		// await ViewController.replayGame();
 	}
 }
 

@@ -30,12 +30,13 @@ const ViewController = {
 			if (result.strike === 3) break;
 		}
 		OutputView.printGameOver();
+
+		await ViewController.replayGame();
 	},
 
 	async replayGame() {
 		const inputNumber = await inputErrorHandler(InputView.readReplayingGame, validateReplayingNumber);
 		if (inputNumber === "1") ViewController.playGame();
-		return;
 	},
 };
 
