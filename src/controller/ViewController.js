@@ -1,13 +1,13 @@
 import InputView from "../view/InputView.js";
 import OutputView from "../view/OutputView.js";
 import inputErrorHandler from "../service/inputErrorHandler.js";
-import { validateNumbers } from "../service/validateInput.js";
+import { validateNumbers, validateReplayingNumber } from "../service/validateInput.js";
 import InputViewService from "../service/InputViewService.js";
 import BaseballGame from "../model/BaseballGame.js";
 
 const ViewController = {
 	gameStart() {
-		InputView.printGameStart();
+		OutputView.printGameStart();
 	},
 
 	async getUserNumber() {
@@ -25,11 +25,17 @@ const ViewController = {
 			result = { strike: 0, ball: 0 };
 			const userNum = await ViewController.getUserNumber();
 			result = baseballGame.compareNumbers(userNum, result);
-			console.log(result);
 			OutputView.printResultMessage(result);
 
 			if (result.strike === 3) break;
 		}
+		OutputView.printGameOver();
+	},
+
+	async replayGame() {
+		const inputNumber = await inputErrorHandler(InputView.readReplayingGame, validateReplayingNumber);
+		if (inputNumber === "1") ViewController.playGame();
+		return;
 	},
 };
 
