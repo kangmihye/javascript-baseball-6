@@ -1,8 +1,9 @@
 import { ERROR } from "../utils/Constants.js";
-import { isInvalidNumber, isDuplicated, isInvalidSelection } from "../utils/conditions.js";
+import { isInvalidNumber, isDuplicated, isInvalidLength, isInvalidSelection } from "../utils/conditions.js";
 
 export const validateNumbers = (input) => {
 	if (isInvalidNumber(input)) throw new Error(ERROR.isInvalidNum);
+	if (isInvalidLength(input)) throw new Error(ERROR.isInvalidNum);
 	if (isDuplicated(input)) throw new Error(ERROR.isDuplicated);
 };
 

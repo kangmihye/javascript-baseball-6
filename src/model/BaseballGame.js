@@ -12,8 +12,6 @@ class BaseballGame {
 			if (num === userNumbers[idx]) return (result.strike += 1);
 			if (userNumbers.includes(num)) return (result.ball += 1);
 		});
-
-		console.log("컴", this.#computerNumbers);
 		return result;
 	}
 }

@@ -4,7 +4,7 @@ export const INPUT_VIEW = Object.freeze({
 });
 
 export const OUTPUT_VIEW = Object.freeze({
-	startGame: "숫자 야구 게임을 시작합니다.\n",
+	startGame: "숫자 야구 게임을 시작합니다.",
 	printGameOver: "3개의 숫자를 모두 맞히셨습니다! 게임 종료",
 });
 
