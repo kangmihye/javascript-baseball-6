@@ -16,3 +16,7 @@ export const isDuplicated = (input) => {
 	//true면 중복
 	return input.length !== new Set(input).size;
 };
+
+export const isInvalidSelection = (input) => {
+	return Number(input) !== 1 && Number(input) !== 2;
+};
