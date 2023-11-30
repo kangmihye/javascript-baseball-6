@@ -19,5 +19,3 @@ class BaseballGame {
 }
 
 export default BaseballGame;
-
-// console.log(new BaseballGame().compareNumbers([1, 2, 3], { strike: 0, ball: 0 }));
